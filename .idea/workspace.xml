@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="This is the start of the current project.">
-      <changelist_data name="Dordeo" email="dordeomeyrin@gmail.com" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stock_Recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock_Recommender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User_Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/User_Profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__main__.py" afterDir="false" />
-    </list>
+    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Changes 10:17" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +38,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Dordeo/ITrade.git",
+    "accountId": "574ddf94-120a-440d-bc70-f37340a45114"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Stock.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Stock_Recommender.py" root0="SKIP_INSPECTION" />
@@ -160,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733591761256</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes 10:17">
+      <option name="closed" value="true" />
+      <created>1733606401092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733606401092</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the start of the current project." />
-    <option name="LAST_COMMIT_MESSAGE" value="This is the start of the current project." />
+    <MESSAGE value="Changes 10:17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 10:17" />
   </component>
 </project>
