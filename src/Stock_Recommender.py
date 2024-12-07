@@ -8,6 +8,7 @@ class stock_recommender:
     path: str;
     df: dataframe;
     tdf: dataframe;
+    perentile: dataframe;
 
     def __init__(self):
         self.path = "";
@@ -22,7 +23,7 @@ class stock_recommender:
         self.tdf = None;
 
 
-    def sort_by_ESG(self, df, user) -> dataframe:
+    def sort_by_ESG(self, df: dataframe, user) -> dataframe:
         df["CompoundScore"] = (df["Environment"] if user.environment else 0 +
                                df["Social"] if user.social else 0 +
                                df["Governance"] if user.governance else 0);
@@ -33,11 +34,12 @@ class stock_recommender:
 
         return df;
 
-    def get_unique(self, df, n) -> dataframe:
+    def get_unique(self, df: dataframe, n) -> dataframe:
 
         if n > len(df):
             return df;
 
+        #TODO clean up this code
         unique_industries = df["Industry"].unique();
         # unique_ industries is a numpy_array that contains all unique industries
 
@@ -86,6 +88,28 @@ class stock_recommender:
 
         return res
 
+    def is_top_percentile(self, row):
+        industry = row["Industry"]
+        performance = row["Performance"]
+
+        return performance >= self.percentile[industry]
+    def get_top_percentile(self, df: dataframe, n, quan):
+        grouped = df.groupby("Industry"); # I group them by industry
+
+        self.percentile = grouped["Performance"].quantile(quan)
+
+        df["TopPercentile"] = df.apply(self.is_top_percentile, axis = 1);
+
+        res = df[df["TopPercentile"]]
+
+        if len(res) < n:
+            return self.get_top_percentile(df, df, n, quan-0.05);
+
+        return res;
+
+
+
+
     def get_stocks(self, user: user_profile, n: int) -> dataframe:
 
         # according to my algorythm we are first going to exclude some stocks based on their establishment year
@@ -94,39 +118,20 @@ class stock_recommender:
 
         self.tdf = self.df[self.df["FoundationYear"] <= user.establishment_year];
 
-        # This is a function that will select entries only from certain industry if user did not want to select
-        # any industry user_profile automatically sets industry to "" which in turn makes str.contains() useless
+        # now I should do transformations if I am looking at a specific top percentile of the industry
+        if user.performance:
+            self.tdf = self.get_top_percentile(self.tdf, n, 0.90)
 
-        self.tdf = self.tdf[self.tdf["Industry"].str.contains(user.industry, case = False)];
-
-        # next I am going to sort based on the compound sum of social, environment and governance parameters if they are
-        # set to be true as it is per my algorythm. To achieve this I am going to create a new column in the dataframe
-        # that takes all parameters that are true and combines them into one. After it just selects N of those left
-        # however I will only do so and only if at least one of ESG params is set true
-
+        #here I filter the top percentile or the non transformed tdf based on the ESG criteria
         if (user.governance or user.social or user.environment):
-
-            # this line of code does the steps descrived earlier
+            # this line of code does it
             self.tdf = self.sort_by_ESG(self.tdf, user);
-        else:
-            self.tdf = self.tdf.sort_values(by="Performance", ascending=False);
-
-        # this one just selects the first n entries
-        # one beauty of my code is that main dataframe is by default sorted for performance os if the
-        # previous conditional statement is not excecuted we will just have n smaple of best performing stocks
-
-        # if the user has previously selected a specific industry if is useless to conitue forward so I am just going
-        # return current tdf as the code next will only work for a case if the user did not select an industry
-        if user.industry != "":
-            self.tdf = self.tdf.head(n);
-            self.tdf = self.tdf.sort_values(by="Performance", ascending=False);
-            return self.tdf;
 
         # now however I want to include all unique industries at least once as long as it is in confines
         # of number of stocks the user entered
 
-
-        res = res.sort_values(by = "Performance", ascending=False);
+        res = self.get_unique(self.tdf, n)
+        res = res.sort_values(by = ["Industry", "Performance"], ascending=[False, False]);
 
         return res;
 
