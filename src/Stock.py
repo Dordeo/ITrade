@@ -17,7 +17,7 @@ class stock:
     governance: float;
 
     def __init__(self):
-        self.id = ""
+        self.id = "000"
         self.performance = 0;
         self.foundation_year = 0;
         self.industry = "";
