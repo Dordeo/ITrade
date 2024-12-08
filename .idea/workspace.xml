@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Made a unique function that selects a specific number of unique elements in the dataframe and returns a sorted dataframe.">
+    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Made a top percentile function and optimized the main get_stocks function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Stock_Recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock_Recommender.py" afterDir="false" />
     </list>
@@ -41,18 +41,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Dordeo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dordeo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Dordeo/ITrade.git",
-    "accountId": "574ddf94-120a-440d-bc70-f37340a45114"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dordeo/ITrade.git&quot;,
+    &quot;accountId&quot;: &quot;574ddf94-120a-440d-bc70-f37340a45114&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Stock.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Stock_Recommender.py" root0="SKIP_INSPECTION" />
@@ -184,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733607042091</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made a top percentile function and optimized the main get_stocks function">
+      <option name="closed" value="true" />
+      <created>1733609230687</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733609230687</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +242,7 @@
     <MESSAGE value="This is the start of the current project." />
     <MESSAGE value="Changes 10:17" />
     <MESSAGE value="Made a unique function that selects a specific number of unique elements in the dataframe and returns a sorted dataframe." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a unique function that selects a specific number of unique elements in the dataframe and returns a sorted dataframe." />
+    <MESSAGE value="Made a top percentile function and optimized the main get_stocks function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a top percentile function and optimized the main get_stocks function" />
   </component>
 </project>
