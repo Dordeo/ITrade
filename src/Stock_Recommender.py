@@ -127,6 +127,9 @@ class stock_recommender:
             # this line of code does it
             self.tdf = self.sort_by_ESG(self.tdf, user);
 
+        else:
+            self.tdf = self.tdf.sort_values(by = "Performance", ascending = False);
+
         # now however I want to include all unique industries at least once as long as it is in confines
         # of number of stocks the user entered
 

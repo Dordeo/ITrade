@@ -1,0 +1,61 @@
+boot up program
+
+ask user if they want a year setting
+    if yes, ask them to enter a year and store the value in year
+
+ask user if they want to focus on the most important stocks
+    if yes, store true in performance variable
+
+ask user if they want to sort them based on ESG scores
+    if yes
+        ask user to enter if they want to focus on Environment Social and Governance score individually
+            if yes set the respective variable true
+
+ask the user how much stock do they want
+store the answer in number
+
+from the variables create user profile
+
+Start the dataframe
+
+filter the dataframe by performance
+
+send the user profile to the dataframe
+
+start processing dataframe based on user profile
+
+if year setting is true
+    exclude all entries younger than that year
+
+if most important stocks setting is true
+    create function is_top_percentile(row of the dataframe){
+        if rows performance > nth percentile
+            row[is top percentile] = True
+            where n is such a number that ensures the inclusion of number of the stocks user wants displayed
+    }
+
+    go through all the entries in the dataframe and apply is_top_percentile to each row
+    starting with percentile is 90 and if there are not enough True values
+
+    go through all of them again decrementing the percentile by 5, repeat until either percentile is 0
+    or there are n or more stocks in the dataframe with True values
+
+    remove column[is top percentile]
+
+if one of ESG setting is true
+    create column Compound sum in all elements in the dataframe
+
+    set the column equally to that columns economical + social + governance score if and only if
+    the respective economical social and governance settings are active in the user profile
+
+    sort the dataframe based on the compound sum
+
+    remove compound sum column
+
+create result dataframe
+
+add to result dataframe equal amount of elements from each industry taking them from original dataframe
+
+send the result to the user in form of a table
+
+Stop operations.

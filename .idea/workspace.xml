@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Made a top percentile function and optimized the main get_stocks function">
+    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Finishing touches">
+      <change afterPath="$PROJECT_DIR$/reports/pseudo code" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_template.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Stock_Recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock_Recommender.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733609230687</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1733674526344</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733674526344</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +253,7 @@
     <MESSAGE value="Changes 10:17" />
     <MESSAGE value="Made a unique function that selects a specific number of unique elements in the dataframe and returns a sorted dataframe." />
     <MESSAGE value="Made a top percentile function and optimized the main get_stocks function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a top percentile function and optimized the main get_stocks function" />
+    <MESSAGE value="Finishing touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches" />
   </component>
 </project>
