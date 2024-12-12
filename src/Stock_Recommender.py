@@ -105,6 +105,7 @@ class stock_recommender:
         if len(res) < n or quan <= 0:
             return self.get_top_percentile(df, df, n, quan-0.05);
 
+        res = res.drop(columns = ["TopPercentile"])
         return res;
 
 

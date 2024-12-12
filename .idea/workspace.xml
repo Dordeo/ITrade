@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Finishing touches">
-      <change afterPath="$PROJECT_DIR$/reports/pseudo code" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_template.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stock_Recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock_Recommender.py" afterDir="false" />
-    </list>
+    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Report, pseudo code and presentation plus flowchart" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,13 +60,16 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2ptFnlBLWcrhBzaORMyTQ0PajKE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;public-head&quot;,
@@ -202,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733674526344</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Report, pseudo code and presentation plus flowchart">
+      <option name="closed" value="true" />
+      <created>1733954624783</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733954624783</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,11 +255,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="This is the start of the current project." />
     <MESSAGE value="Changes 10:17" />
     <MESSAGE value="Made a unique function that selects a specific number of unique elements in the dataframe and returns a sorted dataframe." />
     <MESSAGE value="Made a top percentile function and optimized the main get_stocks function" />
     <MESSAGE value="Finishing touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches" />
+    <MESSAGE value="Report, pseudo code and presentation plus flowchart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Report, pseudo code and presentation plus flowchart" />
   </component>
 </project>
