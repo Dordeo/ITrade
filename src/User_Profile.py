@@ -1,3 +1,6 @@
+## User profile is a custom class used for containing the information about the user and their prefered choices
+# during the search or user input proccesses
+
 class user_profile:
     #user id
     id: str;
@@ -11,7 +14,7 @@ class user_profile:
     #for year of establishment parameter
     establishment_year: int;
 
-    #for ESG Parameters search active
+    #for ESG Parameters search when active
     environment: bool;
     social: bool;
     governance: bool;

@@ -25,7 +25,9 @@ send the user profile to the dataframe
 start processing dataframe based on user profile
 
 if year setting is true
-    exclude all entries younger than that year
+    exclude all entries younger than that year, however if there are not enough entries to match number of
+    stocks n - user wants - reverse changes and repeat the step relaxing the year parameter by 10 years until there are
+    enough stocks
 
 if most important stocks setting is true
     create function is_top_percentile(row of the dataframe){
@@ -35,8 +37,9 @@ if most important stocks setting is true
     }
 
     go through all the entries in the dataframe and apply is_top_percentile to each row
-    starting with percentile is 90 and if there are not enough True values
+    starting with percentile is 90
 
+    and if there are not enough True values
     go through all of them again decrementing the percentile by 5, repeat until either percentile is 0
     or there are n or more stocks in the dataframe with True values
 

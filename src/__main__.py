@@ -1,4 +1,5 @@
 from Stock_Recommender import *
+# I use tabulate for output as it is one of the best in my opinion for output in a console
 from tabulate import tabulate
 
 # just a regular function to call during times when console user input is needed
@@ -7,7 +8,7 @@ def user_input()->user_profile:
 
     user = user_profile();
 
-    a: str = input("Would you like to prioritize performance of the establishments? -> Yes or No\n");
+    a: str = input("Would you like to prioritize top in the indsutry stocks? -> Yes or No\n");
 
     if "yes" in a.lower():
         user.performance = True;
@@ -20,12 +21,6 @@ def user_input()->user_profile:
             user.establishment_year = int(a);
         except:
             user.establishment_year = 9999;
-
-    a = input("Would you like to search for establishments created of a certain industry? Yes or No\n");
-
-    if "yes" in a.lower():
-        a = input("Type an industry -> ");
-        user.industry = a;
 
     a = input("Would you like to search for establishments with high enviornment score? Yes or No\n");
 
@@ -45,11 +40,11 @@ def user_input()->user_profile:
     return user;
 
 def main():
-    path = "../rescs/stocks.csv";
+    path = "../rescs/stocks.csv"; ## local path tot the database of stocks change it based on your enbiornment
 
     user = user_input();
 
-    n = 15;
+    n = 15; ## safe barier for user input
 
     try:
         n = int(input("Please enter the amount of stocks you want to us to recommend -> "));

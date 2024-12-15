@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="Report, pseudo code and presentation plus flowchart" />
+    <list default="true" id="83728ded-8825-43e2-9ade-c264be482c5b" name="Changes" comment="touch up on the user input">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/pseudo code" beforeDir="false" afterPath="$PROJECT_DIR$/reports/pseudo code" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_template.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stock_Recommender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock_Recommender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User_Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/User_Profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__main__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733954624783</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="touch up on the user input">
+      <option name="closed" value="true" />
+      <created>1734015640556</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734015640556</updated>
+    </task>
+    <task id="LOCAL-00012" summary="touch up on the user input">
+      <option name="closed" value="true" />
+      <created>1734015698980</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734015698980</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +285,7 @@
     <MESSAGE value="Made a top percentile function and optimized the main get_stocks function" />
     <MESSAGE value="Finishing touches" />
     <MESSAGE value="Report, pseudo code and presentation plus flowchart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Report, pseudo code and presentation plus flowchart" />
+    <MESSAGE value="touch up on the user input" />
+    <option name="LAST_COMMIT_MESSAGE" value="touch up on the user input" />
   </component>
 </project>
