@@ -1,10 +1,49 @@
 import pandas as pd
-from User_Profile import user_profile
-# I use tabulate for output as it is one of the best in my opinion for output in a console
-from tabulate import tabulate
 from pandas.core.interchange import dataframe
+from tabulate import tabulate
+## User profile is a custom class used for containing the information about the user and their prefered choices
+# during the search or user input processes
+class user_profile:
+    #user id
+    id: str;
 
+    #if we are searching for highest performance
+    performance: bool;
 
+    #if we are also searchign for specific industry
+    industry: str;
+
+    #for year of establishment parameter
+    establishment_year: int;
+
+    #for ESG Parameters search when active
+    environment: bool;
+    social: bool;
+    governance: bool;
+
+    def __init__(self):
+        self.id = "000"
+        self.performance = False;
+        self.industry = ""
+        self.establishment_year = 9999;
+        self.social = False;
+        self.environment = False;
+        self.governance = False ;
+
+    def __init__(self, id="000", performance=False, establishment_year=9999,
+                 social=False, environment=False, governance=False, industry = ""):
+        self.id = id[0:2]
+
+        self.performance = performance
+        self.industry = industry;
+
+        self.establishment_year = int(establishment_year);
+        self.social = social
+        self.environment = environment
+        self.governance = governance
+
+    def __setattr__(self, __name, __value):
+        super().__setattr__(__name, __value)
 class stock_recommender:
     path: str;
     df: dataframe;
@@ -115,7 +154,7 @@ class stock_recommender:
         # now I just apply a function from above, and store the boolean value in a column TopPercentile
         # I use lamda row to avoid a specific copy warning during the slicing proccess when panda uses apply method
         # took a while to find out I should do this as .apply method is not really that safe
-        df["TopPercentile"] = df.apply(lambda row: self.is_top_percentile, axis = 1);
+        df["TopPercentile"] = df.apply(lambda row: self.is_top_percentile(row), axis=1)
 
         #res is just a list right now that stores only a row with TopPercentile column set to True,
         # I use it to count the amount of True values in the column to see
@@ -138,7 +177,7 @@ class stock_recommender:
 
         if len(res) < n:
             # incrementing the year by a decade as an increasing margin
-            return sort_year(df, n, year + 10);
+            return self.sort_year(df, n, year + 10);
 
         # otherwise I am just going to preint a message that will print out a year and return res
         print(f"Including stocks from year up to {year} to fit user parameters");
@@ -175,6 +214,65 @@ class stock_recommender:
 
         return res;
 
+def user_input()->user_profile:
+
+    user = user_profile();
+
+    a: str = input("Would you like to prioritize top in the indsutry stocks? -> Yes or No\n");
+
+    if "yes" in a.lower():
+        user.performance = True;
+
+    a = input("Would you like to search for establishments created before a certain year? Yes or No\n");
+
+    if "yes" in a.lower():
+        a = input("Type a year -> ");
+        try:
+            user.establishment_year = int(a);
+        except:
+            user.establishment_year = 9999;
+
+    a = input("Would you like to search for establishments with high enviornment score? Yes or No\n");
+
+    if "yes" in a.lower():
+        user.environment = True;
+
+    a = input("Would you like to search for establishments with high social score? Yes or No\n");
+
+    if "yes" in a.lower():
+        user.social = True;
+
+    a = input("Would you like to search for establishment with high governance score? Yes or No\n");
+
+    if "yes" in a.lower():
+        user.governance = True;
+
+    return user;
+
+def main():
+    path = "../rescs/stocks.csv"; ## local path tot the database of stocks change it based on your enbiornment
+
+    user = user_input();
+
+    n = 15; ## safe barier for user input
+
+    try:
+        n = int(input("Please enter the amount of stocks you want to us to recommend -> "));
+    except:
+        n = 15;
+
+    recommender = stock_recommender(path);
+
+    df = recommender.get_stocks(user, n)
+
+    table = tabulate(df, headers = "keys", tablefmt = "grid", showindex=False);
+
+    print(table)
+
+if __name__ == "__main__":
+    main();
+
+main();
 
 
 
